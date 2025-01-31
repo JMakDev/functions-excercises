@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Functions</title>
+</head>
+
+<body>
+
+
+    <script>
+
+        function greet(name) {
+
+
+            if (!name) {
+                console.log("Hi there");
+            } else {
+                console.log(` hello ${name} `);
+            }
+        }
+
+        greet('john');
+        greet();
+
+        function convertToFarenheight(celcius) {
+            console.log((celcius * 9 / 5) + 32)
+        }
+
+        convertToFarenheight(25);
+
+        function convertToCelcius(farenheight) {
+            console.log((farenheight - 32) * 5 / 9)
+        }
+
+        convertToCelcius(77);
+        convertToCelcius(86);
+
+        function convertTemperatures(degrees, unit) {
+
+        }
+
+        function convertTemperature(degrees, unit) {
+            if (unit === 'C') {
+                const result = convertToFarenheight(degrees);
+                return `${result}F`;
+            } else if (unit === 'F') {
+                const result = convertToCelcius(degrees);
+                return `${result}C`;
+            }
+        }
+
+        convertTemperature(25, 'C');
+        convertTemperature(77, 'F');
+        convertTemperature(86, 'F');
+    </script>
+</body>
+
+</html>
